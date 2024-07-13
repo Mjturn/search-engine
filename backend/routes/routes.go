@@ -7,6 +7,14 @@ import (
 
 func HandleRoutes(router *gin.Engine) {
     router.GET("/", func(context *gin.Context) {
-        context.HTML(http.StatusOK, "index.html", nil)
+        context.File("../frontend/static/html/index.html")
+    })
+    
+    router.GET("/search", func(context *gin.Context) {
+        searchQuery := context.Query("search-query-input")
+        
+        context.HTML(http.StatusOK, "search-results.html", gin.H {
+            "searchQuery": searchQuery,
+        })
     })
 }

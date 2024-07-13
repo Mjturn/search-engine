@@ -9,7 +9,7 @@ import (
 func main() {
     router := gin.Default()
     router.Static("/static", "../frontend/static")
-    router.LoadHTMLGlob("../frontend/static/html/*")
+    router.LoadHTMLGlob("../frontend/templates/*")
     routes.HandleRoutes(router)
 
     err := router.Run(":8080")
