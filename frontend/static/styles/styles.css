@@ -16,7 +16,7 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
-#search-form {
+#home-search-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,7 +24,7 @@ body {
     height: 100vh;
 }
 
-#search-form > * {
+#home-search-form > * {
     margin: 5px;
 }
 
@@ -47,6 +47,10 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+#search-results-search-form {
+    margin: 10px;
 }
 
 #search-query-heading {

@@ -7,6 +7,11 @@
         <link rel="stylesheet" type="text/css" href="static/styles/styles.css">
     </head>
     <body>
+        <form id="search-results-search-form" method="GET" action="/search">
+            <input id="search-query-input" name="search-query-input" value="{{ .searchQuery }}" type="text" placeholder="Search the web" required>
+            <button id="search-button" type="submit">Search</button>
+        </form>
+        
         <h1 id="search-query-heading">{{ .searchQuery }}</h1>
     </body>
 </html>
